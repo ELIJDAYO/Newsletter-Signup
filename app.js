@@ -61,6 +61,6 @@ var http = require('http');
 http.createServer(app).listen(80);
 
 //change port when depolying
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server is running on port 3000");
 });
